@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  reactive_mongo:
+    image: mongo:3.4
+    hostname: mongo
+    container_name: reactive_spring_mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - network-reactive
+
+networks:
+  network-reactive:
